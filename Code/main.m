@@ -1,11 +1,3 @@
-%==========================================================================
-
-% MATLAB code for Project 1 (Perception Class)
-% Written by Yash Shah (115710498)
-% email ID: ysshah95@umd.edu
-
-%==========================================================================
-
 %% Initializing the Code
 
 clc
@@ -13,14 +5,14 @@ close all
 clear all
 
 %-------------------------Importing the Video File------------------------- 
-VideoFile = VideoReader('challenge_video.mp4');
+VideoFile = VideoReader('Deep Curve.mp4');
 
 %-------------------Loading Region of Interest Variables-------------------
 load('roi_variables', 'c', 'r');
 
 %-----------------Defining Variables for saving Video File-----------------
 
-Output_Video=VideoWriter('Result_Yash');
+Output_Video=VideoWriter('Result_Video');
 Output_Video.FrameRate= 25;
 open(Output_Video);
 
