@@ -1,0 +1,17 @@
+clc
+close all
+clear all
+
+%-------------------------Importing the Video File-------------------------
+VideoFile = VideoReader('project_video.mp4');
+
+%-------------------Loading Region of Interest Variables-------------------
+load('roi_variables', 'c', 'r');
+
+%-----------------Defining Variables for saving Video File-----------------
+
+Output_Video=VideoWriter('Result_Yash');
+
+%-----------------Changing the Fps According to Yours----------------------
+Output_Video.FrameRate= 25;
+open(Output_Video); 
