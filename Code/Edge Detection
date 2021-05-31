@@ -1,3 +1,11 @@
  %-----------Edge Detection----------
  frameW = edge(White, 'canny', 0.2);
  frameY = edge(Yellow, 'canny', 0.2); 
+ 
+ %-----------Neglecting closed edges in smaller areas-------------
+  frameY = bwareaopen(frameY,15);
+  frameW = bwareaopen(frameW,15);
+
+  figure('Name','Detecting Edges of Yellow mask'), imshow(frameY);
+  figure('Name','Detecting Edges of White mask'), imshow(frameW); 
+
