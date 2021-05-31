@@ -38,9 +38,11 @@
     The frame is masked with yellow and white color to detect the lane lines perfectly.
     
    Yellow mask
+   
    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Yellow%20Mask%20Img.jpg)
 
    White mask
+   
    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/White%20Mask%20Img.jpg)
 
 
@@ -82,11 +84,11 @@
 
 ## Inspiration
 I took a lot of inspiration from:
-- [Leah Linder](http://leah-lindner.com/) Portfolio
-- [Hugo Peters](http://hugo.fyi/) Portfolio
+- BMW X7
+- Tesla Car
 
 ## License
-> You can check out the full license [here](./LICENSE.md)
+> You can check out the full license [here](https://github.com/Piraicv/Autonomous-car/blob/main/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
 
