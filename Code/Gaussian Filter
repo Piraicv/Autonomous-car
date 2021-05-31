@@ -1,0 +1,8 @@
+while hasFrame(VideoFile)
+
+    %------------------Reading each frame from Input File------------------
+    frame = readFrame(VideoFile);
+    figure('Name','Original Image'), imshow(frame);
+
+    frame = imgaussfilt3(frame);
+    figure('Name','Filtered Image'), imshow(frame); 
