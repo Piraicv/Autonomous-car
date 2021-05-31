@@ -1,0 +1,38 @@
+    %--------------Thresholds for masking Yellow Color--------------
+
+    %----------------------thresholds for 'Hue'---------------------
+    channel1MinY = 130; % I/P according to urs
+    channel1MaxY = 255; % I/P according to urs
+    %------------------thresholds for 'Saturation'------------------
+    channel2MinY = 130; % I/P according to urs
+    channel2MaxY = 255; % I/P according to urs
+    %---------------------thresholds for 'Value'--------------------
+    channel3MinY = 0; % I/P according to urs
+    channel3MaxY = 130; % I/P according to urs
+
+    %-----------Create mask based on chosen histogram thresholds-----------
+    Yellow=((frame(:,:,1)>=channel1MinY)|(frame(:,:,1)<=channel1MaxY))& ...
+        (frame(:,:,2)>=channel2MinY)&(frame(:,:,2)<=channel2MaxY)&...
+        (frame(:,:,3)>=channel3MinY)&(frame(:,:,3)<=channel3MaxY);
+
+    figure('Name','Yellow Mask'), imshow(Yellow);
+
+    
+    %--------------Thresholds for masking White Color---------------
+
+    %----------------------thresholds for 'Hue'---------------------
+    channel1MinW = 200; % I/P according to urs
+    channel1MaxW = 255; % I/P according to urs
+    %------------------thresholds for 'Saturation'------------------
+    channel2MinW = 200; % I/P according to urs
+    channel2MaxW = 255; % I/P according to urs
+    %---------------------thresholds for 'Value'--------------------
+    channel3MinW = 200; % I/P according to urs
+    channel3MaxW = 255; % I/P according to urs
+
+    %-----------Create mask based on chosen histogram thresholds-----------
+    White=((frame(:,:,1)>=channel1MinW)|(frame(:,:,1)<=channel1MaxW))&...
+        (frame(:,:,2)>=channel2MinW)&(frame(:,:,2)<=channel2MaxW)& ...
+        (frame(:,:,3)>=channel3MinW)&(frame(:,:,3)<=channel3MaxW);
+
+    figure('Name','White Mask'), imshow(White); 
