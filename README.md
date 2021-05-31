@@ -32,16 +32,16 @@
 --> frames one by one
     First the frame is read and them filtered using a Gaussian Filter.
     
-    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Gaussian%20Filtered%20Img.jpg)
+   ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Gaussian%20Filtered%20Img.jpg)
 
 --> Masking the image for White and Yellow Color
     The frame is masked with yellow and white color to detect the lane lines perfectly.
     
-    Yellow mask
-    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Yellow%20Mask%20Img.jpg)
+   Yellow mask
+   ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Yellow%20Mask%20Img.jpg)
 
-    White mask
-    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/White%20Mask%20Img.jpg)
+   White mask
+   ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/White%20Mask%20Img.jpg)
 
 
 --> Edge Detection
@@ -53,12 +53,17 @@
 --> Hough Transform
     In this section I have used the hough function to get the hough transfrom of the binary edge detected image, which gives us the hough values and then I have plotted the         hough plot. as shown in the figure below.
     
-    hough plot
-    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Hough%20lines%20found%20in%20image.jpg)
-    hough peak found for yellow
-    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Hough%20peaks%20found%20for%20yellow%20lines.jpg)
-    hough peak found for white
-    ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Hough%20peaks%20found%20for%20white%20lines.jpg)
+   hough plot
+   
+   ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Hough%20lines%20found%20in%20image.jpg)
+   
+   hough peak found for yellow
+   
+   ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Hough%20peaks%20found%20for%20yellow%20lines.jpg)
+   
+   hough peak found for white
+    
+   ![alt text](https://github.com/Piraicv/Autonomous-car/blob/main/Output/Hough%20peaks%20found%20for%20white%20lines.jpg)
     
 --> Lane Detection
    In this section, I have predicted where to turn by looking at the vanishing point found from the extrapolated lines.
