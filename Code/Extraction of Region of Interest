@@ -1,0 +1,37 @@
+ %--------------ROI points by plotting it on image-------------
+
+    % figure(1)
+    % imshow(frame);
+    % [r c] = ginput(10);
+
+    %---------Extracting ROI from Yellow Edge Frame-----------
+
+    roiY = roipoly(frameY, r, c);
+    [R , C] = size(roiY);
+    for i = 1:R
+        for j = 1:C
+            if roiY(i,j) == 1
+                frame_roiY(i,j) = frameY(i,j);
+            else
+                frame_roiY(i,j) = 0;
+            end
+        end
+    end
+
+    figure('Name','Filtering ROI from Yellow mask'), imshow(frame_roiY);
+
+    %---------Extracting ROI from White Edge Frame----------
+
+    roiW = roipoly(frameW, r, c);
+    [R , C] = size(roiW);
+    for i = 1:R
+        for j = 1:C
+            if roiW(i,j) == 1
+                frame_roiW(i,j) = frameW(i,j);
+            else
+                frame_roiW(i,j) = 0;
+            end
+        end
+    end
+
+    figure('Name','Filtering ROI from White mask'), imshow(frame_roiW); 
